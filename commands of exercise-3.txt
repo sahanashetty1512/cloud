@@ -1,0 +1,54 @@
+1️⃣ Go to home directory
+cd ~
+Why: Start from a known location.
+
+2️⃣ Create the shell script
+nano smvitm.sh
+Why: To write all required commands inside a shell script file as asked in the question.
+
+3️⃣ Write this inside smvitm.sh
+#!/bin/bash
+mkdir -p smvitm
+cd smvitm
+mkdir cs ec ai ad me ce
+mkdir 6a 6b 6c
+cd 6a
+mkdir bcs601 bcs602
+cd bcs601
+mkdir 6a 6b 6c
+touch 6a/cs_bcs601_6a_feedback.txt
+touch 6b/cs_bcs601_6b_feedback.txt
+touch 6c/cs_bcs601_6c_feedback.txt
+cd ..
+cd bcs602
+mkdir 6a 6b 6c
+touch 6a/cs_bcs602_6a_feedback.txt
+touch 6b/cs_bcs602_6b_feedback.txt
+touch 6c/cs_bcs602_6c_feedback.txt
+cd ~
+Why inside file:
+Because the question explicitly asks for a shell script, and scripts allow automation, reusability, and proper execution order.
+
+4️⃣ Save and exit
+CTRL + O
+ENTER
+CTRL + X
+
+
+Why: Save the script.
+5️⃣ Give execute permission
+chmod +x smvitm.sh
+Why: Allows Linux to run the file as a program.
+
+6️⃣ Run the script
+./smvitm.sh
+Why: Executes all commands automatically.
+
+7️⃣ Install tree (as YOU did)
+sudo apt update
+sudo apt install -y tree
+Why: tree is not installed by default in Cloud Shell.
+
+8️⃣ Verify using tree
+tree smvitm
+Why: Shows directory structure clearly for verification and examiner.
