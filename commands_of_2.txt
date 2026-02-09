@@ -1,9 +1,15 @@
+🔹 Step 1: Create directories
 cd ~
 mkdir cricket
 cd cricket
 mkdir ind pak eng aus
 
-cat > ind/cricket_ind <<EOF
+🔹 Step 2: Create player files
+For India:
+cd ind
+nano cricket_ind
+
+Add 12 player names, one per line, 
 Virat Kohli
 Rohit Sharma
 KL Rahul
@@ -16,9 +22,14 @@ Mohammed Shami
 Rishabh Pant
 Yuzvendra Chahal
 Ravichandran Ashwin
-EOF
 
-cat > pak/cricket_pak <<EOF
+Save (Ctrl+O) and exit (Ctrl+X)
+
+Pakistan
+cd ../pak
+nano cricket_pak
+
+Add 12 players:
 Babar Azam
 Shaheen Afridi
 Shadab Khan
@@ -31,36 +42,46 @@ Hasan Ali
 Iftikhar Ahmed
 Mohammad Nawaz
 Sarfaraz Ahmed
-EOF
 
-cat > eng/cricket_eng <<EOF
-Joe Root
+England
+cd ../eng
+nano cricket_eng
+
 Ben Stokes
+Joe Root
 Jos Buttler
-Jonny Bairstow
-James Anderson
-Stuart Broad
+Jofra Archer
+Sam Curran
 Moeen Ali
+Ollie Pope
+Jonny Bairstow
 Chris Woakes
 Mark Wood
-Sam Curran
-Harry Brook
 Zak Crawley
-EOF
+Dominic Sibley
 
-cat > aus/cricket_aus <<EOF
-Steve Smith
-David Warner
+Australia
+cd ../aus
+nano cricket_aus
+
 Pat Cummins
+David Warner
+Steve Smith
+Marnus Labuschagne
 Mitchell Starc
 Glenn Maxwell
-Aaron Finch
-Marnus Labuschagne
-Travis Head
-Josh Hazlewood
-Marcus Stoinis
 Alex Carey
+Marcus Stoinis
 Cameron Green
-EOF
+Josh Hazlewood
+Travis Head
+Nathan Lyon
 
-grep -h "" ind/* pak/* eng/* aus/* | sort > all_players.txt
+🔹 Step 3: Merge all files into one list
+cd ~/cricket
+cat ind/cricket_ind pak/cricket_pak eng/cricket_eng aus/cricket_aus > all_players.txt
+
+🔹 Step 4: Sort alphabetically A → Z
+sort all_players.txt > all_players_sorted.txt
+Check:
+cat all_players_sorted.txt
