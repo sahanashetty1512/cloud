@@ -1,0 +1,66 @@
+cd ~
+mkdir cricket
+cd cricket
+mkdir ind pak eng aus
+
+cat > ind/cricket_ind <<EOF
+Virat Kohli
+Rohit Sharma
+KL Rahul
+Jasprit Bumrah
+Ravindra Jadeja
+Shreyas Iyer
+Hardik Pandya
+Shubman Gill
+Mohammed Shami
+Rishabh Pant
+Yuzvendra Chahal
+Ravichandran Ashwin
+EOF
+
+cat > pak/cricket_pak <<EOF
+Babar Azam
+Shaheen Afridi
+Shadab Khan
+Mohammad Rizwan
+Haris Rauf
+Fakhar Zaman
+Imad Wasim
+Shoaib Malik
+Hasan Ali
+Iftikhar Ahmed
+Mohammad Nawaz
+Sarfaraz Ahmed
+EOF
+
+cat > eng/cricket_eng <<EOF
+Joe Root
+Ben Stokes
+Jos Buttler
+Jonny Bairstow
+James Anderson
+Stuart Broad
+Moeen Ali
+Chris Woakes
+Mark Wood
+Sam Curran
+Harry Brook
+Zak Crawley
+EOF
+
+cat > aus/cricket_aus <<EOF
+Steve Smith
+David Warner
+Pat Cummins
+Mitchell Starc
+Glenn Maxwell
+Aaron Finch
+Marnus Labuschagne
+Travis Head
+Josh Hazlewood
+Marcus Stoinis
+Alex Carey
+Cameron Green
+EOF
+
+grep -h "" ind/* pak/* eng/* aus/* | sort > all_players.txt
